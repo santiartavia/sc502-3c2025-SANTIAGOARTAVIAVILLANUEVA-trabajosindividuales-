@@ -1,0 +1,135 @@
+:root {
+  --brand:#2F80ED;
+  --brand-dark:#1c6ad6;
+  --ok:#28a745;
+  --ink:#222;
+  --muted:#667085;
+  --bg:#f0f2f5;
+  --card:#ffffff;
+  --nav:#2b2b2b;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.nav {
+  background: var(--nav);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { font-weight: 700; letter-spacing: .3px; }
+.menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 4px;
+  transition: color .2s ease;
+}
+.menu a:hover { color: #fff; }
+
+.wrap {
+  max-width: 1100px;
+  margin: 28px auto 80px;
+  padding: 0 20px;
+}
+
+.perfil {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  padding: 36px 28px;
+  margin: 0 auto;
+  text-align: center;
+}
+.perfil .nombre {
+  font-size: 28px;
+  color: var(--ok);
+  margin: 0 0 8px;
+}
+.perfil .especialidad {
+  color: var(--ink);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+#descripcion {
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+.btn {
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--brand);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(47,128,237,.25);
+  transition: transform .08s ease, background .2s ease, box-shadow .2s ease;
+}
+.btn:hover {
+  background: var(--brand-dark);
+  box-shadow: 0 6px 16px rgba(28,106,214,.28);
+}
+.btn:active { transform: translateY(1px); }
+
+.comentarios {
+  margin-top: 34px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tarjeta {
+  background: var(--card);
+  width: min(310px, 100%);
+  border-radius: 22px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+.tarjeta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+}
+.paciente { font-weight: 800; margin-bottom: 8px; }
+.texto { color: #3c3c3c; font-style: italic; margin: 0 0 14px; }
+.fecha { color: var(--muted); font-size: 12px; }
+
+.espaciador { height: 26px; }
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .menu { gap: 16px; }
+  .perfil { padding: 26px 18px; }
+  .perfil .nombre { font-size: 24px; }
+}
+
